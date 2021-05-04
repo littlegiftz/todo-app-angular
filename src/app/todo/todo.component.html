@@ -18,10 +18,11 @@
       <mat-list-option 
         *ngFor="let task of taskList" 
         checkboxPosition="before" 
-        [selected]="task.completed"
+        [selected]="task.completed===true"
         (click)="toggleCompleted(task)"
         class="todo-item"
         [title]="task.task"
+        [value]="task.id"
         [ngClass]="{'todo-completed': task.completed === true}"
       >
         <span class="content">{{ task.task }}</span>

@@ -1,9 +1,15 @@
-@import '../../assets/scss/custom-color';
+@import '../../assets/scss/_color';
+@import '../../assets/scss/_mixin';
 
 .wrapper{
+  padding: 0 10px 60px;
+  width: calc(100% - 20px);
   max-width: 462px;
   margin: 60px auto;
-  padding-bottom: 60px;
+
+  @include style_for(md_lower){
+    margin: 20px auto;
+  }
 }
 
 .header{

@@ -1,0 +1,74 @@
+$xs-breakpoint: 321px;
+$sm-breakpoint: 600px;
+$md-breakpoint: 960px;
+$lg-breakpoint: 1264px;
+$xl-breakpoint: 1904px;
+
+@mixin style_for($point) {
+
+  @if $point == xs_lower {
+    @media only screen and (max-width: $xs-breakpoint - 1px) {
+      @content;
+    }
+  }
+  @else if $point == xs_upper {
+    @media only screen and (min-width: $xs-breakpoint) {
+      @content;
+    }
+  }
+
+  @if $point == sm_lower {
+    @media only screen and (max-width: $sm-breakpoint - 1px) {
+      @content;
+    }
+  }
+  @else if $point == sm_upper {
+    @media only screen and (min-width: $sm-breakpoint) {
+      @content;
+    }
+  }
+
+  @else if $point == md_lower {
+    @media only screen and (max-width: $md-breakpoint - 1px) {
+      @content;
+    }
+  }
+  @else if $point == md_upper {
+    @media only screen and (min-width: $md-breakpoint) {
+      @content;
+    }
+  }
+
+  @else if $point == lg_lower {
+    @media only screen and (max-width: $lg-breakpoint - 1px) {
+      @content;
+    }
+  }
+  @else if $point == lg_upper {
+    @media only screen and (min-width: $lg-breakpoint) {
+      @content;
+    }
+  }
+
+  @else if $point == xl_lower {
+    @media only screen and (max-width: $xl-breakpoint - 1px) {
+      @content;
+    }
+  }
+  @else if $point == xl_upper {
+    @media only screen and (min-width: $xl-breakpoint) {
+      @content;
+    }
+  }
+
+  @else if $point == md_lg {
+    @media only screen and (min-width: $md-breakpoint) and (max-width: $lg-breakpoint - 1px) {
+      @content;
+    }
+  }
+  @else if $point == sm_md {
+    @media only screen and (min-width: $sm-breakpoint) and (max-width: $md-breakpoint - 1px) {
+      @content;
+    }
+  }
+}

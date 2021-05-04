@@ -61,8 +61,7 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(['/login'])
       },
       error => {
-        console.log(error)
-        this.snackBar.open('Error','', {
+        this.snackBar.open(error,'', {
           duration: 2000,
           verticalPosition: 'top',
           panelClass: ['mat-snackbar-error']

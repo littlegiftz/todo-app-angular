@@ -14,7 +14,8 @@ import { DatePipe, formatDate } from '@angular/common';
   selector: 'app-todo',
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  providers: [DatePipe]
 })
 export class TodoComponent implements OnInit {
   constructor(
@@ -75,13 +76,15 @@ export class TodoComponent implements OnInit {
 
       this.todoService.newTask(params).subscribe(
         (resp:any) => {
-          this.taskList.unshift(resp)
           console.log(resp)
+          this.taskList.unshift(resp)
         },
         error => {
           console.log(error)
         }
       )
+
+      console.log(this.taskList)
     })
   }
 

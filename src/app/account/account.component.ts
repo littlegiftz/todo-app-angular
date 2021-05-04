@@ -56,8 +56,7 @@ export class AccountComponent implements OnInit {
         this.router.navigate(['/'])
       },
       error => {
-        console.log(error)
-        this.snackBar.open('Error','', {
+        this.snackBar.open(error,'', {
           duration: 2000,
           verticalPosition: 'top',
           panelClass: ['mat-snackbar-error']

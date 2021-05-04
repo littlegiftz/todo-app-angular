@@ -1,4 +1,4 @@
-@import './custom-color';
+@import './_color';
 
 body{
   background: #f6f7f7;
@@ -53,6 +53,14 @@ button {
 
   &.mat-flat-button{
     border-radius: 6px !important;
+
+    &.mat-primary{
+      &.mat-button-disabled{
+        background: $green;
+        color: $white;
+        opacity: 0.3;
+      }
+    }
   }
   &.btn-block{
     width: 100%;
@@ -113,6 +121,8 @@ button {
 }
 
 .account-wrapper{
+  padding: 0 10px;
+  width: 100%;
   max-width: 304px;
   margin: auto;
   text-align: center;

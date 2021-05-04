@@ -6,7 +6,13 @@
     </mat-form-field>
     <label [ngClass]="{'error': f.duedate.touched && f.duedate.invalid}">Due Date *</label>
     <mat-form-field appearance="outline">
-      <input matInput placeholder="dd / mm / yyyy" [matDatepicker]="picker" formControlName="duedate">
+      <input matInput 
+        placeholder="dd / mm / yyyy" 
+        [matDatepicker]="picker" 
+        formControlName="duedate" 
+        (click)="picker.open()"
+        readonly
+      >
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
@@ -14,5 +20,10 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button class="btn-cancel" (click)="cancel()">Cancel</button>
-  <button mat-flat-button class="btn-submit" color="primary" (click)="save()">Save</button>
+  <button mat-flat-button 
+    class="btn-submit" 
+    color="primary" 
+    (click)="save()" 
+    [disabled]="!form.valid" 
+    id="btnSave">Save</button>
 </div>
