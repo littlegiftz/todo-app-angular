@@ -1,0 +1,18 @@
+<div mat-dialog-content>
+  <form [formGroup]="form" class="custom-form">
+    <label [ngClass]="{'error': f.task.touched && f.task.invalid}">Task Name *</label>
+    <mat-form-field appearance="outline">
+      <input type="text" matInput placeholder="Task Name" formControlName="task">
+    </mat-form-field>
+    <label [ngClass]="{'error': f.duedate.touched && f.duedate.invalid}">Due Date *</label>
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="dd / mm / yyyy" [matDatepicker]="picker" formControlName="duedate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button class="btn-cancel" (click)="cancel()">Cancel</button>
+  <button mat-flat-button class="btn-submit" color="primary" (click)="save()">Save</button>
+</div>

@@ -1,0 +1,25 @@
+<div class="full-page">
+  <div class="account-wrapper">
+    <h1>Register</h1>
+
+    <form [formGroup]="form" (ngSubmit)="register()" class="custom-form">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email" >
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password" >
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Comfirm Password</mat-label>
+        <input type="password" matInput formControlName="confirmPassword">
+      </mat-form-field>
+
+      <button mat-flat-button color="primary" class="btn-block" [disabled]="!form.valid">Register</button>
+    </form>
+
+    <button mat-button color="primary" [routerLink]="['/login']" class="btn-block mt-1">Back to Login</button>
+
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="wrapper">
+
+  <div class="header">
+    <h2>To-do list</h2>
+    <button mat-flat-button color="primary" (click)="newTask()" class="btn-add">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <mat-expansion-panel expanded>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        All
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    
+    <mat-selection-list *ngIf="taskList">
+      <mat-list-option 
+        *ngFor="let task of taskList" 
+        checkboxPosition="before" 
+        [selected]="task.completed"
+        (click)="toggleCompleted(task)"
+        class="todo-item"
+        [title]="task.task"
+        [ngClass]="{'todo-completed': task.completed === true}"
+      >
+        <span class="content">{{ task.task }}</span>
+        <span class="date">{{ task.duedate | date :'dd/MM/y'}}</span>
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-expansion-panel>
+
+  <div class="footer">
+    <button mat-button color="primary" [routerLink]="['/account']">Change Password</button>
+    <button mat-button color="primary" (click)="logout()">Logout</button>
+  </div>
+
+</div>

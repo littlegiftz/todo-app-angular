@@ -1,0 +1,33 @@
+@import '../../../../assets/scss/custom-color';
+
+label{
+  display: block;
+  margin-bottom: 5px;
+  &.error{
+    color: $pink;
+  }
+}
+
+mat-form-field{
+  margin-bottom: 7px;
+}
+mat-datepicker-toggle{
+  color: $green;
+}
+
+.mat-dialog-actions{
+  display: flex;
+  margin-bottom: 0;
+  padding: 15px 0 0;
+
+  .btn-cancel{
+    padding: 0 !important;
+    height: 48px;
+    min-width: auto !important;
+  }
+  .btn-submit{
+    margin-left: auto;
+    height: 48px;
+    width: 180px;
+  }
+}

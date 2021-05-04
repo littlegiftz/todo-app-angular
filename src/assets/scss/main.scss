@@ -1,0 +1,123 @@
+@import './custom-color';
+
+body{
+  background: #f6f7f7;
+}
+
+.mt-1{
+  margin-top: 10px !important;
+}
+.mt-2{
+  margin-top: 20px !important;
+}
+
+.full-page{
+  height: 100vh;
+  display: flex;
+}
+
+snack-bar-container{
+  &.mat-snack-bar-container{
+    box-shadow: none !important;
+    background: $white !important;
+    color: $green;
+    border-radius: 6px;
+    border: 1px solid $green;
+  }
+  &.mat-snackbar-error{
+    color: $pink;
+    border: 1px solid $pink;
+  }
+}
+
+.mat-typography{
+  h1{
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: -0.29px;
+    color: $darkgrey;
+  }
+  h2{
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: -0.22px;
+    color: $darkgrey;
+  }
+}
+
+button {
+  letter-spacing: -0.2px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  font-size: 16px !important;
+
+  &.mat-flat-button{
+    border-radius: 6px !important;
+  }
+  &.btn-block{
+    width: 100%;
+    height: 48px;
+  }
+}
+
+.custom-form{
+  h1{
+    margin-bottom: 30px;
+  }
+
+  .btn-block{
+    margin-top: 22px;
+  }
+
+  mat-form-field{ 
+    width: 100%;
+    .mat-form-field-outline{
+      background: $white;
+      color: $lightergreen;
+      height: 48px;
+      top: 0;
+      border-radius: 6px;
+
+      .mat-form-field-outline-start{
+        border-radius: 6px 0 0 6px;
+      }
+      .mat-form-field-outline-end{
+        border-radius: 0 6px 6px 0;
+      }
+    }
+    .mat-form-field-wrapper{
+      padding-bottom: 8px;
+      margin: 4px 0 8px;
+    }
+    .mat-form-field-label{
+      color: $lightgreen;
+      top: 18px;
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .mat-form-field-infix{
+      padding: 3px 0;
+      border-top: 11px solid transparent;
+    }
+    .mat-input-element{
+      height: 24px;
+    }
+
+    &.mat-form-field-should-float{
+      .mat-form-field-label{
+        transform: translateY(-20px) scale(0.75) !important;
+      }
+    }
+  }
+}
+
+.account-wrapper{
+  max-width: 304px;
+  margin: auto;
+  text-align: center;
+
+  h1{
+    margin-bottom: 30px;
+  }
+}

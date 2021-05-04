@@ -1,0 +1,135 @@
+@import '../../assets/scss/custom-color';
+
+.wrapper{
+  max-width: 462px;
+  margin: 60px auto;
+  padding-bottom: 60px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  h2{
+    margin-bottom: 0;
+  }
+  .btn-add{
+    margin-left: auto;
+    width: 60px;
+    height: 40px;
+    border-radius: 20px !important;
+    font-size: 24px;
+  }
+}
+
+mat-expansion-panel{
+  box-shadow: none !important;
+  border-radius: 8px;
+  .mat-expansion-panel-header{
+    height: 56px;
+    padding: 0 20px;
+    .mat-expansion-panel-header-title{
+      font-size: 16px;
+      color: $darkgrey !important;
+    }
+    &:hover{
+      background: rgba(0,0,0,0.01) !important;
+    }
+  }
+  .mat-expansion-panel-body{
+    padding: 0;
+  }
+}
+
+mat-selection-list{
+  padding-top: 0 !important;
+  .todo-item{
+    height: 56px !important;
+    &:hover{
+      background: rgba(0,0,0,0.01) !important;
+    }
+    &:not(last-child){
+      &:after{
+        display: block;
+        content: '';
+        width: calc(100% - 40px);
+        height: 1px;
+        background: #dddddd;
+        left: 20px;
+        position: relative;
+      }
+    }
+    .mat-list-item-content{
+      padding: 0 20px !important;
+    }
+    .mat-list-text{
+      flex-direction: row !important;
+      font-size: 16px;
+      line-height: 1.5;
+      color: $darkgrey;
+      padding-left: 15px !important;
+    }
+    .content{
+      margin-right: 10px !important;
+      line-height: 1.5;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .date{
+      margin-left: auto !important;
+      line-height: 1.5;
+    }
+    .mat-pseudo-checkbox{
+      width: 24px;
+      height: 24px;
+      border: solid 1px $lightergreen;
+      border-radius: 100%;
+      &:after{
+        top: 7px;
+        left: 6px;
+      }
+      &.mat-pseudo-checkbox-checked{
+        border: solid 1px $green;
+      }
+    }
+
+    &.todo-completed{
+      .content{
+        position: relative;
+        // text-decoration: line-through;
+        &:after{
+          position: absolute;
+          display: block;
+          content: '';
+          width: 100%;
+          height: 2px;
+          background: $darkgrey;
+          top: 12px;
+        }
+      }
+    }
+  }
+}
+
+
+.footer{
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  justify-content: center;
+
+  button{
+    border-radius: 6px; 
+    padding: 8px 12px;
+    margin: 0 8px;
+  }
+}
+
+.task-dialog{
+  mat-dialog-container{
+    padding: 30px !important;
+    border-radius: 10px;
+  }
+}

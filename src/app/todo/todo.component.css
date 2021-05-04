@@ -1,0 +1,156 @@
+.wrapper {
+  max-width: 462px;
+  margin: 60px auto;
+  padding-bottom: 60px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  margin-bottom: 0;
+}
+
+.header .btn-add {
+  margin-left: auto;
+  width: 60px;
+  height: 40px;
+  border-radius: 20px !important;
+  font-size: 24px;
+}
+
+mat-expansion-panel {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-radius: 8px;
+}
+
+mat-expansion-panel .mat-expansion-panel-header {
+  height: 56px;
+  padding: 0 20px;
+}
+
+mat-expansion-panel .mat-expansion-panel-header .mat-expansion-panel-header-title {
+  font-size: 16px;
+  color: #454c60 !important;
+}
+
+mat-expansion-panel .mat-expansion-panel-header:hover {
+  background: rgba(0, 0, 0, 0.01) !important;
+}
+
+mat-expansion-panel .mat-expansion-panel-body {
+  padding: 0;
+}
+
+mat-selection-list {
+  padding-top: 0 !important;
+}
+
+mat-selection-list .todo-item {
+  height: 56px !important;
+}
+
+mat-selection-list .todo-item:hover {
+  background: rgba(0, 0, 0, 0.01) !important;
+}
+
+mat-selection-list .todo-item:not(last-child):after {
+  display: block;
+  content: '';
+  width: calc(100% - 40px);
+  height: 1px;
+  background: #dddddd;
+  left: 20px;
+  position: relative;
+}
+
+mat-selection-list .todo-item .mat-list-item-content {
+  padding: 0 20px !important;
+}
+
+mat-selection-list .todo-item .mat-list-text {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #454c60;
+  padding-left: 15px !important;
+}
+
+mat-selection-list .todo-item .content {
+  margin-right: 10px !important;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+mat-selection-list .todo-item .date {
+  margin-left: auto !important;
+  line-height: 1.5;
+}
+
+mat-selection-list .todo-item .mat-pseudo-checkbox {
+  width: 24px;
+  height: 24px;
+  border: solid 1px #dae5df;
+  border-radius: 100%;
+}
+
+mat-selection-list .todo-item .mat-pseudo-checkbox:after {
+  top: 7px;
+  left: 6px;
+}
+
+mat-selection-list .todo-item .mat-pseudo-checkbox.mat-pseudo-checkbox-checked {
+  border: solid 1px #01b266;
+}
+
+mat-selection-list .todo-item.todo-completed .content {
+  position: relative;
+}
+
+mat-selection-list .todo-item.todo-completed .content:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #454c60;
+  top: 12px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer button {
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 0 8px;
+}
+
+.task-dialog mat-dialog-container {
+  padding: 30px !important;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=todo.component.css.map */

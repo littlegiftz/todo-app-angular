@@ -1,0 +1,128 @@
+body {
+  background: #f6f7f7;
+}
+
+.mt-1 {
+  margin-top: 10px !important;
+}
+
+.mt-2 {
+  margin-top: 20px !important;
+}
+
+.full-page {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+snack-bar-container.mat-snack-bar-container {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  background: #FFFFFF !important;
+  color: #01b266;
+  border-radius: 6px;
+  border: 1px solid #01b266;
+}
+
+snack-bar-container.mat-snackbar-error {
+  color: #f95d9e;
+  border: 1px solid #f95d9e;
+}
+
+.mat-typography h1 {
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: -0.29px;
+  color: #454c60;
+}
+
+.mat-typography h2 {
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: -0.22px;
+  color: #454c60;
+}
+
+button {
+  letter-spacing: -0.2px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  font-size: 16px !important;
+}
+
+button.mat-flat-button {
+  border-radius: 6px !important;
+}
+
+button.btn-block {
+  width: 100%;
+  height: 48px;
+}
+
+.custom-form h1 {
+  margin-bottom: 30px;
+}
+
+.custom-form .btn-block {
+  margin-top: 22px;
+}
+
+.custom-form mat-form-field {
+  width: 100%;
+}
+
+.custom-form mat-form-field .mat-form-field-outline {
+  background: #FFFFFF;
+  color: #dae5df;
+  height: 48px;
+  top: 0;
+  border-radius: 6px;
+}
+
+.custom-form mat-form-field .mat-form-field-outline .mat-form-field-outline-start {
+  border-radius: 6px 0 0 6px;
+}
+
+.custom-form mat-form-field .mat-form-field-outline .mat-form-field-outline-end {
+  border-radius: 0 6px 6px 0;
+}
+
+.custom-form mat-form-field .mat-form-field-wrapper {
+  padding-bottom: 8px;
+  margin: 4px 0 8px;
+}
+
+.custom-form mat-form-field .mat-form-field-label {
+  color: #a7b2ac;
+  top: 18px;
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.custom-form mat-form-field .mat-form-field-infix {
+  padding: 3px 0;
+  border-top: 11px solid transparent;
+}
+
+.custom-form mat-form-field .mat-input-element {
+  height: 24px;
+}
+
+.custom-form mat-form-field.mat-form-field-should-float .mat-form-field-label {
+  -webkit-transform: translateY(-20px) scale(0.75) !important;
+          transform: translateY(-20px) scale(0.75) !important;
+}
+
+.account-wrapper {
+  max-width: 304px;
+  margin: auto;
+  text-align: center;
+}
+
+.account-wrapper h1 {
+  margin-bottom: 30px;
+}
+/*# sourceMappingURL=main.css.map */
